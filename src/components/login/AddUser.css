@@ -1,0 +1,38 @@
+.modal-dialog{
+width: 610px;
+padding: 32px 32px 24px 32px;
+flex-direction: column;
+align-items: center;
+border-radius: 20px;
+}
+.register{
+    display: flex;
+    height: 48px;
+    padding: 17px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+
+    border-radius: 12px;
+    background: var(--main-button, #0F46CE);
+}
+
+.cancel{
+    display: flex;
+    height: 48px;
+    padding: 17px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+
+    border-radius: 12px;
+    border: 2px solid var(--main-button, #0F46CE);
+}
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+h5 {
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-left: 72px;
+    padding-top: 50px;
+}
+
+.down {
+    margin-left: 72px;
+}
+
+.all {
+    margin-left: 5px;
+    color: #252631;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.filter {
+    margin-right: 10px;
+    margin-left: 30px;
+    color: #778CA2;
+    text-align: right;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 133.333% */
+}
+
+.filterimg {
+    margin-right: 5px;
+    margin-left: 10px;
+    padding-right: 10px
+}
+
+.az {
+    color: #252631;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 23.45px;
+}
+
+.azimg {
+    margin-right: 10px;
+}
+
+.sortimg {
+    margin-left: 10px;
+}
+
+.sort {
+    margin-left: 20px;
+    color: #778CA2;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 133.333% */
+}
+
+.plus {
+    margin-left: 1200px;
+    color: #778CA2;
+    text-align: right;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 133.333% */
+}
+
+.plusimg {
+    margin-left: 10px;
+}
+
+.download {
+    margin-left: 30px;
+    color: #778CA2;
+    text-align: right;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 133.333% */
+}
+
+.downloadimg {
+    margin-left: 10px;
+}
+
+h6 {
+    color: #535353;
+    display: flex;
+    width: 180px;
+    padding-left: 0px;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+
+.usersTable{
+    
+}
