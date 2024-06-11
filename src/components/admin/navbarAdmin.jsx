@@ -10,6 +10,7 @@ import Notification from "../img/Notifications_unread.png"
 import menuDot from "../img/menu-dots-vert.png";
 import AddUser from "../login/AddUser";
 import AddAdmin from "./AddAdmin";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -24,18 +25,15 @@ function NavbarAdmin({ keycloak }) {
         setSearchInput(e.target.value);
     };
 
-    //const logOut = () => {
         const handleLogout = async () => {
-        try {
-            await keycloak.logout(); // Logout from Keycloak
-            localStorage.removeItem("user")
-      // After successful logout, redirect to login page or any other page
-            //navigate('/login'); // Assuming you have a login route
-        } catch (error) {
-            console.error('Logout failed:', error);
-        }
+            try {
+                await keycloak.logout(); // Logout from Keycloak
+                localStorage.removeItem("user")
+          // After successful logout, redirect to login page or any other page
+            } catch (error) {
+                console.error('Logout failed:', error);
+            }
         };
-    //}
 
     const toggleModalAdmin = () =>{
         setShowModalAdmin((show1) => !show1);
