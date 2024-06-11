@@ -56,6 +56,9 @@ const Layout = (props) => {
             .then((response) => {
                 localStorage.setItem('user', JSON.stringify(response.data.data));
             })
+            .catch((error) => {
+              console.log(error)
+            })
         }
     })
     .catch((error) => {
