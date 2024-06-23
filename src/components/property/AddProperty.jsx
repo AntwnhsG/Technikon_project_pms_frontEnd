@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Modal, Form, Button, Row, Col} from "react-bootstrap";
-import { createPropertyApi } from "../../api/PropertyApiService";
+import { createPropertyApi, sendEmail } from "../../api/PropertyApiService";
 
 const AddProperty = ({ showModal, toggleModal }) => {
   const userData = JSON.parse(localStorage.getItem('user'));
@@ -52,6 +52,7 @@ const AddProperty = ({ showModal, toggleModal }) => {
     createPropertyApi(property)
       .then((response) => {
         console.log(response.data);
+        sendEmail(userData)
         toggleModal();
       })
       .catch((error) => {

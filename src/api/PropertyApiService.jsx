@@ -13,3 +13,5 @@ export const deletePropertyApi = (propertyId) => apiClient.delete(`/property/${p
 export const propertyRepairsReports = (userId) => apiClient.get(`propertyRepair?userId=${userId}`);
 
 export const countPropertiesApi = () => apiClient.get(`property/count`);
+
+export const sendEmail = (user) => apiClient.post('property/sendEmail', user);

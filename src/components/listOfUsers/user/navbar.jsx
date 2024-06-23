@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import technikon from "../../img/Frame.png";
 import logo from "../../img/Vector.png";
 import "./navbar.css";
@@ -13,17 +13,23 @@ import menuDot from "../../img/menu-dots-vert.png";
 function Navbar( { keycloak }) {
 
     const [searchInput, setSearchInput] = useState("");
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         e.preventDefault();
         setSearchInput(e.target.value);
     };
 
-    const logOut = () => {
-        localStorage.removeItem("user")
-        keycloak.logout();
-        keycloak.session.destroy();
-    }
+    const logOut = async () => {
+        try {
+            await keycloak.logout(); // Logout from Keycloak
+            localStorage.removeItem("user");
+            // After successful logout, redirect to the home page
+            navigate("/");
+        } catch (error) {
+            console.error('Logout failed:', error);
+        }
+    };
 
 
 
@@ -87,7 +93,7 @@ function Navbar( { keycloak }) {
                             </button>
                             <div className="dropdown-content" style={{direction: "ltr",}}>
                                 <a href="#">Settings</a>
-                                <a onClick={logOut} href="/">Log out</a>
+                                <a onClick={logOut}>Log out</a>
                             </div>
                         </div>
                     </div>

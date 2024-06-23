@@ -19,21 +19,23 @@ function NavbarAdmin({ keycloak }) {
     const [searchInput, setSearchInput] = useState("");
     const [showModalAdmin, setShowModalAdmin] = useState(false)
     const [showModalUser, setShowModalUser] = useState(false)
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         e.preventDefault();
         setSearchInput(e.target.value);
     };
 
-        const handleLogout = async () => {
-            try {
-                await keycloak.logout(); // Logout from Keycloak
-                localStorage.removeItem("user")
-          // After successful logout, redirect to login page or any other page
-            } catch (error) {
-                console.error('Logout failed:', error);
-            }
-        };
+    const handleLogout = async () => {
+        try {
+            await keycloak.logout(); // Logout from Keycloak
+            localStorage.removeItem("user");
+            // After successful logout, redirect to the home page
+            navigate("/");
+        } catch (error) {
+            console.error('Logout failed:', error);
+        }
+    };
 
     const toggleModalAdmin = () =>{
         setShowModalAdmin((show1) => !show1);
@@ -112,7 +114,7 @@ function NavbarAdmin({ keycloak }) {
                             </button>
                             <div className="dropdown-content" style={{direction: "ltr",}}>
                                 <a href="#">Settings</a>
-                                <a onClick={handleLogout} href="/">Log out</a>
+                                <a onClick={handleLogout}>Log out</a>
                             </div>
                         </div>
                     </div>
