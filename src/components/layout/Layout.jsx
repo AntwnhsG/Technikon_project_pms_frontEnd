@@ -134,10 +134,8 @@ const Layout = (props) => {
           };
 
           setUser(loggedUser);
-          // Add logic to store user in localStorage if needed
-          // Example: localStorage.setItem('user', JSON.stringify(loggedUser));
           
-          // Example of adding user to DB if not already stored
+          // Adding user to DB if not already stored
           addUserToDB(loggedUser)
             .then((response) => {
               setLoading(false); // Set loading to false after successful API call
@@ -156,13 +154,13 @@ const Layout = (props) => {
 
       fetchUserProfile();
     }
-  }, [keycloak.authenticated]); // Ensure this effect runs when keycloak authentication changes
+  }, [keycloak.authenticated]); 
 
   if (loading) {
     return <div>Loading...</div>; // Show loading indicator while fetching user profile
   }
 
-  // Assuming you have already stored user in localStorage in addUserToDB response handler
+  // Assuming stored user in localStorage in addUserToDB response handler
   if (localStorage.getItem('user') !== null) {
     console.log(localStorage.getItem('user'))
     if (user && user.role === "user") {
