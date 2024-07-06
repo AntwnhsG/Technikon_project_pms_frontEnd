@@ -1,6 +1,12 @@
 # Project for Harokopio University MSc. 
 This Frontend application functions as the UI for a website that allows customers to manage their properties and register/ handle repairs or renovations regarding the said properties.
 
+# Frameworks - Tools used for implementation
+
+This app was created using React framework which means the source code is written in Javascript.
+For the UI components Bootstrap, custom CSS was used.
+There is implementaion for websockets in order to integrate push notifications but currently it is not functional.
+
 # Requirements
 
 This application can function independently but will not show any UI because of Keycloak. In order to be functional, the application needs to connect with Keycloak (correctly configured as described below) and the Backend application found in the below URL. Also Kong is needed as an application gateway in oreder to hit the backend endpoints.
